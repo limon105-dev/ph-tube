@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PH Tube || Blog</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-cover bg-center"
+  style="background-image: url(https://images.pexels.com/photos/6662557/pexels-photo-6662557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)">
+  <header>
+    <!-- breadcrumb area -->
+    <div class="breadcrumbs sm:container mx-auto py-20 px-5 sm:px-0">
+      <h2 class="text-center text-5xl font-bold">Blog</h2>
+      <ul class="justify-center my-4 text-xl font-medium">
+        <li><a href="index.html" class="underline text-red-500">Home</a></li>
+        <li>Documents</li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!-- blog section -->
+    <section class="sm:container mx-auto px-5 sm:px-0">
+      <h3 class="text-3xl font-medium pb-4 underline">*Scope Of Var, Let, And Const:</h3>
+      <p class="text-base">
+        The scope of variables in JavaScript is determined by the keywords used to declare them: `var`, `let`, and
+        `const`. The scope defines the region of the code where a variable can be accessed. Let's discuss the scope of
+        each:</p>
+      <div class="py-3">
+        <span class="text-2xl font-semibold">1. **var:** </span>
+        <ul class="py-3">
+          <li class="py-2">
+            - Variables declared with `var` are function-scoped, which means their scope is limited to the function in
+            which
+            they are declared.
+          </li>
+          <li class="py-2">
+            - If a variable is declared using `var` outside of any function, it becomes a global variable and is
+            accessible
+            throughout the entire program.
+          </li>
+          <li class="py-2">
+            - `var` does not have block scope, meaning it is not limited to the block (within curly braces) where it
+            is
+            defined. This can sometimes lead to unexpected behavior.
+          </li>
+        </ul>
+      </div>
+
+      <div class="py-3">
+        <span class="text-2xl font-semibold">2. **let:**</span>
+        <ul class="py-3">
+          <li class="py-2">
+            - Variables declared with `let` have block scope, meaning they are limited to the block in which they are
+            defined (inside curly braces).
+          </li>
+          <li class="py-2">
+            - `let` allows you to create variables that are confined to a specific block, statement, or expression.
+          </li>
+          <li class="py-2">
+            - It does not get hoisted to the top of its block like `var`.
+          </li>
+        </ul>
+      </div>
+
+      <div class="py-3">
+        <span class="text-2xl font-semibold">3. **const:**</span>
+        <ul class="py-3">
+          <li class="py-2">
+            - Variables declared with `const` also have block scope..
+          </li>
+          <li class="py-2">
+            - `const` is used to declare constants, and its value cannot be reassigned once it is assigned.
+          </li>
+          <li class="py-2">
+            - Like `let`, `const` does not get hoisted to the top of its block.
+          </li>
+        </ul>
+      </div>
+      <p>
+        In summary, `var` is function-scoped, `let` and `const` are block-scoped. Using `let` and `const` is generally
+        preferred over `var` because it helps prevent unintended variable redeclarations and provides better control
+        over variable scoping. Additionally, `const` is useful when you want to declare constants that should not be
+        reassigned.
+      </p>
+    </section>
+
+    <!-- blog section -->
+    <section class="sm:container mx-auto py-24 px-5 sm:px-0">
+      <h3 class="text-3xl font-medium pb-4 underline">*Null And undefined:</h3>
+      <p class="text-base">
+        null and undefined are both special values in JavaScript, but they are used in different contexts.
+      </p>
+      <div class="py-3">
+        <span class="text-2xl font-semibold">1. **null:** </span>
+        <ul class="py-3">
+          <li class="py-2">
+            - The null value is explicitly assigned by the programmer to indicate the absence of any object value or a
+            variable intentionally having no value.
+          </li>
+          <li class="py-2">
+            - It is often used to represent a deliberate non-existence or an empty value.
+          </li>
+          <li class="py-2">
+            - null is commonly used when you want to explicitly say that a variable or an object property should have no
+            value.
+          </li>
+        </ul>
+      </div>
+
+      <div class="py-3">
+        <span class="text-2xl font-semibold">2. **undefined:**</span>
+        <ul class="py-3">
+          <li class="py-2">
+            - The undefined value in JavaScript is the default value assigned to a variable that has been declared but
+            not yet assigned a value.
+          </li>
+          <li class="py-2">
+            - It is also the default return value of a function that does not explicitly return anything.
+          </li>
+          <li class="py-2">
+            - Variables that are declared but not initialized are undefined.
+          </li>
+          <li class="py-2">
+            - undefined is often a signal that something might not be initialized or that a value is missing.
+          </li>
+        </ul>
+      </div>
+      <div class="py-3">
+        <div>
+          <h3 class="text-3xl font-semibold mb-3 underline">Use Cases:</h3>
+          <span class="text-2xl font-semibold">1.null Use Cases: </span>
+          <ul class="py-3">
+            <li class="py-2">
+              - Explicitly setting a variable or object property to indicate the absence of a value.
+            </li>
+            <li class="py-2">
+              - It can be used in comparisons to check if a variable intentionally holds no value.
+            </li>
+          </ul>
+        </div>
+
+        <div class="py-3">
+          <span class="text-2xl font-semibold">2.undefined Use Cases:</span>
+          <ul class="py-3">
+            <li class="py-2">
+              - Default value for function parameters when no argument is passed.
+            </li>
+            <li class="py-2">
+              - Default value for variables that might be initialized later.
+            </li>
+            <li class="py-2">
+              - As the default return value for functions that do not explicitly return anything.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        In practice, null and undefined are often used in different scenarios, but developers need to be mindful of
+        their meanings and use them appropriately to avoid unintended issues in the code.
+      </p>
+    </section>
+    
+    <!-- blog section -->
+    <section class="sm:container mx-auto pb-24 px-5 sm:px-0">
+      <h3 class="text-3xl font-medium pb-4 underline">*REST API:</h3>
+      <p class="text-base">
+        REST API, which stands for Representational State Transfer Application Programming Interface, is an
+        architectural style for designing networked applications. REST is not a protocol, but a set of principles or
+        constraints that define how web standards, such as HTTP and URLs, should be used.
+      </p>
+      <div class="py-3">
+        <span class="text-2xl font-semibold">Key principles of REST include:</span>
+        <ul class="py-3">
+          <li class="py-2">
+            1. Statelessness: Each request from a client to a server must contain all the information needed to
+            understand and fulfill the request. The server should not store any information about the client's state
+            between requests. This makes the system more scalable and easier to maintain.
+          </li>
+          <li class="py-2">
+            2. Client-Server Architecture: The client and server are separate entities that communicate over a network.
+            The client is responsible for the user interface and user experience, while the server is responsible for
+            processing requests, managing resources, and handling business logic.
+          </li>
+          <li class="py-2">
+            3. Uniform Interface: RESTful APIs should have a consistent and uniform interface, making it easy for
+            clients to understand and interact with the API. This is achieved through the following constraints:
+            <ul class="py-3">
+              <li class="py-2">
+                > Resource Identification: Resources (such as data objects or services) are identified by URIs (Uniform
+                Resource Identifiers).
+              </li>
+              <li class="py-2">
+                > Resource Manipulation through Representations: Resources can be manipulated by representing their
+                state in a format, typically JSON or XML, and sending it between the client and server.
+              </li>
+            </ul>
+          </li>
+          <li class="py-2">
+            4. Stateless Communication: Each request from a client to a server should contain all the information needed
+            to understand and fulfill the request. The server should not store any information about the client's state
+            between requests.
+          </li>
+          <li class="py-2">
+            5. Cacheability: Responses from the server can be explicitly marked as cacheable or non-cacheable. This
+            allows clients to reuse responses and reduce the load on the server.
+          </li>
+          <li class="py-2">
+            6. Layered System: The architecture can be composed of multiple layers, with each layer providing a specific
+            set of functionality. Each layer should only be aware of the layer immediately beneath it and should not be
+            concerned with the implementation details of higher layers.
+          </li>
+        </ul>
+      </div>
+      <p>
+        RESTful APIs are commonly used in web development to enable communication between different systems or services
+        over the internet. They use standard HTTP methods (GET, POST, PUT, DELETE) to perform operations on resources,
+        and data is typically exchanged in JSON or XML format. RESTful APIs are widely adopted due to their simplicity,
+        scalability, and ease of use.
+      </p>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
